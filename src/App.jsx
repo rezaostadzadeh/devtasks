@@ -126,6 +126,7 @@ import { SidebarProvider } from "./context/SidebarContext";
 import { ThemeProvider, useTheme } from "./context/ThemeContext";
 import useKeyboardShortcuts from "./hooks/useKeyboardShortcuts";
 import "./index.css";
+import AsciiBannerGenerator from "./pages/DevUtilities/devutilities/AsciiBannerGenerator";
 
 function App() {
   const [hudVisible, setHudVisible] = useState(false);
@@ -374,6 +375,8 @@ function AppInner({ toggleHUD, hudVisible }) {
                 path="/devutilities/yaml-toml"
                 element={<YamlTomlConverter />}
               />
+              <Route path="/devutilities/ascii-banner" element={<AsciiBannerGenerator />}
+               />
 
               {/* Snippet Vault */}
               <Route path="/snippetvault" element={<SnippetVault />} />
