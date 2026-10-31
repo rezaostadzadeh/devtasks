@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
 import SIDEBAR_SECTIONS from "../../config/sidebarSections";
 import { Tag } from "lucide-react";
+import KeyboardInspector from "./devutilities/KeyboardInspector";
 
 const DevUtilities = () => {
   const { dark } = useTheme();
@@ -62,6 +63,66 @@ const DevUtilities = () => {
   ];
 
   const cards = [
+    {
+  title: "FIGlet ASCII Art Generator",
+  description:
+    "Generate stylized ASCII text using a wide variety of FIGlet fonts.",
+  category: "Code & Text",
+  path: "/devutilities/figlet-generator",
+  keywords:
+    "figlet ascii art text banner typography font generator",
+  icon: (
+    <svg
+      className="w-6 h-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M4 6h16M4 12h16M4 18h16"
+      />
+    </svg>
+  ),
+},
+      title: "HTML & CSS Minifier & Beautifier",
+      description:
+        "Minify, compress, format, and beautify HTML and CSS code client-side offline.",
+      category: "Code & Text",
+      path: "/devutilities/html-css-minifier",
+      title: "Keyboard Keycode & Event Inspector",
+      description:
+        "Inspect keyboard keys, key codes, and keyboard event information in real time.",
+      category: "Code & Text",
+      path: "/devutilities/keyboard-inspector",
+      icon: (
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <rect
+            x="3"
+            y="6"
+            width="18"
+            height="12"
+            rx="2"
+            strokeWidth={2}
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+            d="M7 10h.01M11 10h.01M15 10h.01M7 14h10"
+          />
+        </svg>
+      ),
+    },
+
     {
       title: "Hex Viewer & Binary Inspector",
       description:
@@ -225,12 +286,12 @@ const DevUtilities = () => {
         </svg>
       ),
     },
-    {
-      title: "Regex Tester",
+        {
+      title: "CSS Selector Tester",
       description:
-        "Test regular expressions with flags, highlights, matching text, and capturing groups.",
+        "Test CSS selectors against HTML and instantly see matching elements.",
       category: "Code & Text",
-      path: "/devutilities/regex",
+      path: "/devutilities/css-selector-tester",
       icon: (
         <svg
           className="w-6 h-6"
@@ -242,7 +303,29 @@ const DevUtilities = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      ),
+    },
+    {
+      title: "NanoID & ULID Generator",
+      description:
+        "Generate collision-resistant NanoIDs and ULIDs with custom alphabets, size controls, and timestamp decoding.",
+      category: "Security & Crypto",
+      path: "/devutilities/nanoid",
+      icon: (
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
           />
         </svg>
       ),
@@ -1025,6 +1108,29 @@ const DevUtilities = () => {
       ),
     },
     {
+      title: "CSS Neumorphism & Soft UI Generator",
+      description:
+        "Generate soft UI neumorphic shadow effects with flat, concave, convex, and inset shapes.",
+      category: "CSS & Styling",
+      path: "/devutilities/neumorphism",
+      keywords: "neumorphism soft ui shadow inset convex concave css",
+      icon: (
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+          />
+        </svg>
+      ),
+    },
+    {
       title: "CSS Glassmorphism & Box-Shadow Playground",
       description:
         "Design modern glassmorphism effects with backdrop blur, shadows, and live CSS export.",
@@ -1800,23 +1906,23 @@ const DevUtilities = () => {
     {
       title: "CSS Cursor Playground",
       description:
-          "Play around, test, and copy different cursor CSS style effects.",
+        "Play around, test, and copy different cursor CSS style effects.",
       category: "CSS & Styling",
       path: "/devutilities/css-cursor-playground",
       icon: (
-          <svg
-              className="w-6 h-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-          >
-            <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"
-            />
-          </svg>
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"
+          />
+        </svg>
       ),
     },
     {
@@ -1924,7 +2030,7 @@ const DevUtilities = () => {
     const matchesCategory =
       selectedCategory === "All" || card.category === selectedCategory;
     if (!matchesCategory) return false;
-    
+
     const query = searchQuery.toLowerCase().trim();
     if (!query) return true;
 
@@ -2013,11 +2119,10 @@ const DevUtilities = () => {
           {/* Back navigation and page title area. */}
           <Link
             to="/dashboard"
-            className={`inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest transition-all duration-300 w-fit ${
-              dark
-                ? "text-neutral-400 hover:text-white"
-                : "text-neutral-500 hover:text-black"
-            }`}
+            className={`inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest transition-all duration-300 w-fit ${dark
+              ? "text-neutral-400 hover:text-white"
+              : "text-neutral-500 hover:text-black"
+              }`}
           >
             <span>← Back to Dashboard</span>
           </Link>
@@ -2053,21 +2158,19 @@ const DevUtilities = () => {
                   placeholder="Search utilities..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className={`w-full rounded-2xl border py-2.5 pl-11 pr-10 text-xs font-semibold outline-none transition-all duration-300 ${
-                    dark
-                      ? "bg-zinc-950/60 border-zinc-800 text-white placeholder-zinc-600 focus:border-white"
-                      : "bg-white border-neutral-250 text-black placeholder-neutral-400 focus:border-black"
-                  }`}
+                  className={`w-full rounded-2xl border py-2.5 pl-11 pr-10 text-xs font-semibold outline-none transition-all duration-300 ${dark
+                    ? "bg-zinc-950/60 border-zinc-800 text-white placeholder-zinc-600 focus:border-white"
+                    : "bg-white border-neutral-250 text-black placeholder-neutral-400 focus:border-black"
+                    }`}
                 />
                 {searchQuery && (
                   <button
                     type="button"
                     onClick={() => setSearchQuery("")}
-                    className={`absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-xl transition-all duration-200 active:scale-95 cursor-pointer ${
-                      dark
-                        ? "text-zinc-400 hover:text-white hover:bg-zinc-800/80"
-                        : "text-black hover:text-black hover:bg-neutral-150"
-                    }`}
+                    className={`absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-xl transition-all duration-200 active:scale-95 cursor-pointer ${dark
+                      ? "text-zinc-400 hover:text-white hover:bg-zinc-800/80"
+                      : "text-black hover:text-black hover:bg-neutral-150"
+                      }`}
                     aria-label="Clear search query"
                   >
                     <svg
@@ -2102,15 +2205,14 @@ const DevUtilities = () => {
                       key={cat}
                       type="button"
                       onClick={() => setSelectedCategory(cat)}
-                      className={`px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
-                        isSelected
-                          ? dark
-                            ? "bg-white text-black"
-                            : "bg-black text-white"
-                          : dark
-                            ? "text-gray-400 hover:text-white hover:bg-zinc-800/60"
-                            : "text-gray-500 hover:text-black hover:bg-neutral-200/60"
-                      }`}
+                      className={`px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${isSelected
+                        ? dark
+                          ? "bg-white text-black"
+                          : "bg-black text-white"
+                        : dark
+                          ? "text-gray-400 hover:text-white hover:bg-zinc-800/60"
+                          : "text-gray-500 hover:text-black hover:bg-neutral-200/60"
+                        }`}
                     >
                       {cat}
                     </button>
@@ -2130,11 +2232,10 @@ const DevUtilities = () => {
             <>
               <section
                 aria-hidden={!hasFavorites}
-                className={`overflow-hidden transition-all duration-500 ease-out ${
-                  hasFavorites
-                    ? "mb-12 max-h-[3000px] opacity-100 translate-y-0"
-                    : "max-h-0 opacity-0 -translate-y-4 pointer-events-none"
-                }`}
+                className={`overflow-hidden transition-all duration-500 ease-out ${hasFavorites
+                  ? "mb-12 max-h-[3000px] opacity-100 translate-y-0"
+                  : "max-h-0 opacity-0 -translate-y-4 pointer-events-none"
+                  }`}
               >
                 <div className="mb-5 flex items-end justify-between gap-4">
                   <div>
@@ -2178,13 +2279,12 @@ const DevUtilities = () => {
                             event.stopPropagation();
                             toggleFavorite(card.path);
                           }}
-                          className={`absolute right-4 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-300 ${
-                            isFavorite
-                              ? "border-amber-400/40 bg-amber-400/15 text-amber-400"
-                              : dark
-                                ? "border-zinc-800 bg-zinc-950/70 text-zinc-500 hover:border-amber-400/40 hover:text-amber-300"
-                                : "border-zinc-200 bg-white/90 text-zinc-400 hover:border-amber-400/40 hover:text-amber-500"
-                          }`}
+                          className={`absolute right-4 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-300 ${isFavorite
+                            ? "border-amber-400/40 bg-amber-400/15 text-amber-400"
+                            : dark
+                              ? "border-zinc-800 bg-zinc-950/70 text-zinc-500 hover:border-amber-400/40 hover:text-amber-300"
+                              : "border-zinc-200 bg-white/90 text-zinc-400 hover:border-amber-400/40 hover:text-amber-500"
+                            }`}
                         >
                           <svg
                             className="h-5 w-5"
@@ -2271,13 +2371,12 @@ const DevUtilities = () => {
                             event.stopPropagation();
                             toggleFavorite(card.path);
                           }}
-                          className={`absolute right-4 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-300 ${
-                            isFavorite
-                              ? "border-amber-400/40 bg-amber-400/15 text-amber-400"
-                              : dark
-                                ? "border-zinc-800 bg-zinc-950/70 text-zinc-500 hover:border-amber-400/40 hover:text-amber-300"
-                                : "border-zinc-200 bg-white/90 text-zinc-400 hover:border-amber-400/40 hover:text-amber-500"
-                          }`}
+                          className={`absolute right-4 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-300 ${isFavorite
+                            ? "border-amber-400/40 bg-amber-400/15 text-amber-400"
+                            : dark
+                              ? "border-zinc-800 bg-zinc-950/70 text-zinc-500 hover:border-amber-400/40 hover:text-amber-300"
+                              : "border-zinc-200 bg-white/90 text-zinc-400 hover:border-amber-400/40 hover:text-amber-500"
+                            }`}
                         >
                           <svg
                             className="h-5 w-5"

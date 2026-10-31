@@ -194,6 +194,14 @@ const SIDEBAR_SECTIONS = [
         path: "/devutilities/regex",
       },
       {
+        label: "NanoID & ULID Generator",
+        description: "Generate NanoID and ULID identifiers",
+        path: "/devutilities/nanoid",
+      },
+ 	      label: "CSS Selector Tester",
+ 	      path: "/devutilities/css-selector-tester",
+       },
+      {
         label: "Text Processing Suite",
         description:
           "Convert string cases, inspect text layout, analyze word densities, and sort/clean lists",
@@ -331,6 +339,11 @@ const SIDEBAR_SECTIONS = [
         description:
           "Design organic blob shapes using visual handles and advanced 8-point border-radius.",
         path: "/devutilities/fancy-border-radius",
+      },
+      {
+        label: "Neumorphism Studio",
+        description: "Design soft UI neumorphic shadow and surface effects",
+        path: "/devutilities/neumorphism",
       },
       {
         label: "Glassmorphism Playground",
@@ -589,6 +602,11 @@ const SIDEBAR_SECTIONS = [
   description: "Convert text to ASCII art banners",
   path: "/devutilities/ascii-banner",
 },
+        label: "HTML & CSS Minifier & Beautifier",
+        description:
+          "Minify, compress, format, and beautify HTML and CSS code client-side offline.",
+        path: "/devutilities/html-css-minifier",
+      },
     ],
   },
 ];
